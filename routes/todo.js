@@ -16,7 +16,7 @@ todoRouter.get("/", async (req, res) => {
 
 todoRouter.post("/new", async(req, res) => {
     try{
-        const result = await query('Insetr into task (description) values ($1) returning *', 
+        const result = await query('INSERT INTO task (description) VALUES ($1) RETURNING *', 
             [req.body.description])
         res.status(200).json({id: result.rows[0].id})
     } catch (error) {
@@ -39,3 +39,5 @@ todoRouter.delete("/delete/:id", async(req, res) => {
     }
     
 })
+
+module.exports = { todoRouter };
