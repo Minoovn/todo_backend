@@ -4,9 +4,9 @@ const { Pool } = require('pg');
 const query = (sql,values = []) => {
     return new Promise(async(resolve, reject) => {
         try{
-           // const { Pool } = require('pg');
+           //88 const { Pool } = require('pg');
 
-           // const pool = openDb()
+           //88 const pool = openDb()
             const result = await pool.query(sql, values)
             resolve(result)
         } catch (error) {
@@ -24,8 +24,8 @@ const query = (sql,values = []) => {
         port: process.env.DB_PORT,
         ssl: process.env.SSL === 'true'
     })
- //   return pool
-//}
+ //88   return pool
+//88}
 
 module.exports = {
     query
