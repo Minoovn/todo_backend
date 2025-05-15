@@ -1,12 +1,12 @@
 require('dotenv').config()
 console.log(process.env)
-
+const { Pool } = require('pg');
 const query = (sql,values = []) => {
     return new Promise(async(resolve, reject) => {
         try{
-            const { Pool } = require('pg');
+           // const { Pool } = require('pg');
 
-            const pool = openDb()
+           // const pool = openDb()
             const result = await pool.query(sql, values)
             resolve(result)
         } catch (error) {
@@ -15,17 +15,17 @@ const query = (sql,values = []) => {
     })
 }
 
-const openDb = () => {
+//const openDb = () => {
     const pool = new Pool({
         user: process.env.DB_USER,
         host: process.env.DB_HOST,
         database: process.env.DB_NAME,  
         password: process.env.DB_PASSWORD,
         port: process.env.DB_PORT,
-       
+        ssl: process.env.SSL === 'true'
     })
-    return pool
-}
+ //   return pool
+//}
 
 module.exports = {
     query
