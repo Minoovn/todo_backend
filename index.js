@@ -88,6 +88,9 @@ app.delete("/delete/:id", async(req, res) => {
     
 })*/
 
+app.get('/', (req, res) => {
+    res.send('Server is running...');
+});
 
 
 
