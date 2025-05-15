@@ -4,6 +4,8 @@ console.log(process.env)
 const query = (sql,values = []) => {
     return new Promise(async(resolve, reject) => {
         try{
+            const { Pool } = require('pg');
+
             const pool = openDb()
             const result = await pool.query(sql, values)
             resolve(result)

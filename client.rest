@@ -1,8 +1,10 @@
 ### Get tasks
-GET https://todo-backend-qjfh.onrender.com
+GET https://todo-backend-qjfh.onrender.com/
+
 
 ### Add a new task
 POST https://todo-backend-qjfh.onrender.com/new
+
 Content-Type: application/json
 
 {
@@ -10,4 +12,4 @@ Content-Type: application/json
 }
 
 ### Delete a task
-DELETE https://todo-backend-qjfh.onrender.com/delete/1
+DELETE https://todo-backend-qjfh.onrender.com/delete/:id
