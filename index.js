@@ -39,7 +39,7 @@ const port = process.env.PORT
 const openDb = () => {
     const pool = new Pool({
         user: process.env.DB_USER,
-        host: prpcess.env.DB_HOST,
+        host: process.env.DB_HOST,
         database: process.env.DB_NAME,  
         password: process.env.DB_PASSWORD,
         port: process.env.DB_PORT,

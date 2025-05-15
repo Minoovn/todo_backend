@@ -9,6 +9,7 @@ todoRouter.get("/", async (req, res) => {
         const rows = result.rows ? result.rows : []
         res.status(200).json(rows)
     } catch (error) {
+        console.error("GET / error:", error)
         res.statusMessage = error
         res.status(500).json({ error: error })
     }
