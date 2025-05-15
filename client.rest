@@ -1,8 +1,8 @@
 ### Get tasks
-GET http://localhost:3001
+GET https://todo-backend-qjfh.onrender.com
 
 ### Add a new task
-POST http://localhost:3001/new HTTP/1.1
+POST https://todo-backend-qjfh.onrender.com/new
 Content-Type: application/json
 
 {
@@ -10,4 +10,4 @@ Content-Type: application/json
 }
 
 ### Delete a task
-DELETE http://localhost:3001/delete/1 HTTP/1.1
+DELETE https://todo-backend-qjfh.onrender.com/delete/1
